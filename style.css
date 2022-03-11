@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+
+*{
+    font-family: 'Caveat', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#main{
+    display: flex;
+}
+
+.nav-bar{
+    border: black solid 1px;
+    width: 16%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.5s;
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 9997;
+    background-color: white;
+    overflow: hidden;
+    
+}
+
+.nav-bar img{
+    width: 200px;
+    background-size: 100%;
+    margin-left: 10px;
+  
+}
+
+.nav-bar ul{
+    margin-left: 15px;
+    list-style-type: none;
+}
+
+.nav-bar li{
+    margin-top: 40px;
+    font-weight: bold;
+    padding-right: 30px ;
+  
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar i{
+    margin: 5px;
+}
+
+.social-links i{
+    
+    text-align: center;
+    margin: 30px;
+    margin-top: 95%;
+    font-size: large;
+}
+
+.background-cover{
+    background-color: rgb(22, 20, 29);
+    width: 90%;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 200px 100px;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+.main-cover{
+    background-image: url(images/main-cover.jpg);
+  width: 40% ;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-left: 500px;
+   
+}

@@ -65,8 +65,8 @@ section{
 
 .experience{
     width: 30%;
- 
 }
+
 
 .experience div{
     margin: 80px 50px 0px;
@@ -90,9 +90,10 @@ section{
     margin: 10px;
 }
 
+
 .project{
-background-color: rgb(17, 17, 31);
-width: 54%;
+    background-color: rgb(17, 17, 31);
+    width: 54%;
 }
 
 .project h1{
@@ -106,17 +107,14 @@ width: 54%;
     
 }
 
-
-
 .Image-header{
     display: flex;
     justify-content: space-between;
     padding: 3%;
 }
 
-
 .card{
-    
+    background-color: white;
     width: 40%;
     margin: 7% 5% 9%;
     border-radius: 20px;

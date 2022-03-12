@@ -9,9 +9,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
 </head>
 <body>
     <section id="main">
+        <div class="header">
+            <ul>
+            <a href="#about"><li><span>About</span></li></a>
+                <a href="#skills"><li><span>Skills and Qualification</span></li></a>
+                <a href="../Experience and Projects/index.html"><li>Experience and Projects</li></a> 
+                <a href="../Recommendations and footer/index.html"><li>Recommendations</li></a>
+            </ul>
+        </div>
+        <div class="fake"></div>
         <div class="nav-bar">
             <a href="#main"><img src="../images/logo_black_1.png"></a>
             <ul>
@@ -27,8 +37,10 @@
             </div>
         </div>
         <div class="background-cover">
-            <h2>Mohammed Amin Ababneh</h2> <br>
-            <p>Full-Stack Web developer </p>
+        <div>
+            <h2>Mohammed Amin Ababneh</h2>
+            <p>I'm a <span id="typed" ></span> Web developer </p>
+        </div>
         </div>
 
        <img class="main-cover" src="../images/main-cover.jpg">
@@ -37,25 +49,28 @@
 
     <section id="about">
         <div class="fake"></div>
-        <div class="background">
-            <strong><h1>About</h1></strong>
+        <div class="grid-container">
+           <div class="item1">
+            <h1>About</h1>   
             <h3>Mohammed-Amin Motasem Ali Ababneh</h3>
-            <img src="../images/RoundPicture.png" class="round-image">
-           <p>A fresh Computer Engineer, guided by curiosity to gian new knowledge. deeply <br> in love with technologies, problem solving and modern new tech.
-            <br> <br>
-            looking forword to learn from every opportunity that I might have.</p>
-            
-            <div class="education">
-                <p class="yarmouk">Yarmouk University<span> <br> Computer Engineer in Hijjawi. from 2017 to 2021</span></p>
-                <p class="yarmouk">Orange Coding Acadimy<span> <br> One of the lucky people who got an intership at Orange Coding Academy for a full stack web developer.</span></p>
-            </div>
-            <div class="contact">
-                <div class="large">Contact</div> 
+        </div>
+           <div class="item2">
+            <p>A fresh Computer Engineer, guided by curiosity to gian new knowledge. deeply <br> in love with technologies, problem solving and modern new tech.
+                <br> <br>
+                looking forword to learn from every opportunity that I might have.</p>
+           </div>
+           <div class="item3">
+            <p>Yarmouk University <span><br> Computer Engineer in Hijjawi. from 2017 to 2021</span></p>
+            <p>Orange Coding Acadimy <span><br> One of the lucky people who got an intership at Orange Coding Academy for a full stack web developer.</span></p>
+           </div>
+           <div class="item4">
+            <h2>Contact</h2>
+            <div class="">
                 <div>Phone:&#160;0778090562</div>
-                <div>Email:&#160;mohammedamin.ababneh@gmail.com</div>     
-            </div>
-
-            
+                <div>Email:&#160;mohammedamin.ababneh@gmail.com</div>   
+            </div>  
+           </div>
+           <div class="item5"><div>
         </div>
             
     </section>
@@ -117,5 +132,28 @@
             </div>
     </section>
 
+<script>
+
+
+
+var text = ["Full-Stack" , "Front-End" , "Back-End"];
+var counter = 0;
+var elem = document.getElementById("typed");
+var inst = setInterval(change, 2000);
+
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+   
+  }
+}
+
+
+</script>
+
+
+    
 </body>
 </html>

@@ -9,13 +9,18 @@
     scroll-behavior: smooth;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+}
+
 #main{
     display: flex;
 }
 
 .nav-bar{
     border: black solid 1px;
-    width: 16%;
+    max-width: 16%;
     top: 0;
     left: 0;
     bottom: 0;
@@ -24,27 +29,25 @@
     position: fixed;
     z-index: 9997;
     background-color: white;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
     
 }
 
 .nav-bar img{
-    width: 200px;
-    background-size: 100%;
-    margin-left: 10px;
-  
+    width: 100%;
 }
 
 .nav-bar ul{
-    margin-left: 15px;
+    margin: 20px auto 0 20px;
     list-style-type: none;
 }
 
 .nav-bar li{
-    margin-top: 40px;
+    margin: 40px 0 20px 0;
+    width: 100%;
     font-weight: bold;
-    padding-right: 30px ;
-  
 }
 
 .nav-bar a{
@@ -56,26 +59,27 @@
     margin: 5px;
 }
 
-
+.social-links{
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+}
 .social-links i{
-    
-    text-align: center;
-    margin: 30px;
-    margin-top: 95%;
     font-size: large;
 }
 
 .background-cover{
+    
     background-color: rgb(22, 20, 29);
-    width: 90%;
+    width: 44%;
     color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    padding: 200px 100px;
     font-size: 30px;
-    text-align: center;
+}
 
+.background-cover div{
+
+    margin: 50% 0 0 20%;
+    
 }
 
 .main-cover{
@@ -85,77 +89,71 @@
 
 }
 
+
 #about{
     display: flex;
-
-    
 }
 
-#about .background{
+.item1 { grid-area: header; }
+.item2 { grid-area: main;   }
+.item3 { grid-area: education;  }
+.item4 { grid-area: contact;  }
+.item5 { grid-area: picture;  }
+
+.grid-container{
+    padding: 100px 50px;
     background-color: rgb(22, 20, 29);
     width: 84%;
     height: 100vh;
     color: aliceblue;
+    display: grid;
+    grid-template-areas:
+    'header header header picture picture picture'
+    'main main main picture picture picture'
+    'education education education education education education'
+    'contact contact contact contact contact contact';
+
 }
 
-#about h1{
-    
-    font-size: 40px;
-    margin: 50px;
-    margin-top: 0;
-    padding: 20px;
+.item5{
+    background-image: url(../images/RoundPicture.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
 
+.item1 h1 , .item1 h3{
+    padding: 10px;
+}
+.item3{
+    display: flex;
+}
 
-    
+.item3 p{
+margin: 10px 30px 20px 0;
+font-size: 20px;
+}
+
+.item3 span{
+    margin: 10px 30px 20px 0;
+    font-size: 15px;
+    }
+
+.item4{
+
 }
 
 .fake{
     width: 16%;
-    height: 100vh;
+}
+
+.grid-container img{
+    width: 10%;
 }
 
 
-#about h3 {
-    letter-spacing: 1px;
-    margin: 50px;
-    font-size: 40px;
-    width: auto;
-
-}
 
 
-#about p{
-    margin: 50px;
-}
-
-.education{
-    display: flex;
-
-}
-
-.yarmouk{ font-size: 40px;
-    margin-bottom: 0;}
-
-.education span{
-    font-size: 15px;
-    
-}
-
-.contact{
-    margin: 50px;
-    font-size: 20px;
-}
-
-.large{
-    font-size: 40px;
-}
-
-.round-image{
-    position: absolute;
-    width: 400px;
-    right: 90px;
-    top:800px;
-}
 
 #skills{
     display: flex;
@@ -237,12 +235,72 @@
     display: flex;
 }
 
+.header{
+    left: -300px;
+    width: 0;
+    height: 0;
+}
+
 
 @media screen and (max-width: 1000px) {
     .nav-bar{
         left: -300px;
     }
 
-    
+    .header{
+        position: fixed;
+        background-color: aliceblue;
+        width: 100vw;
+        height: 10%;
+        left: 0;
+        transition: all ease-in-out 0.5s;
+        transition: all 0.5s;
+        z-index: 9997;
+
+    }
+
+    .header ul{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    .header li{
+        margin: 10px;
+        text-decoration: none;
+        color: black;
+        margin: 20px;
+    }
+
+    .fake{
+        width: 0%;
+    }
+
+    .main-cover{
+        width: 60%;
+    }
+
+    .background-cover{
+        width: 40%;
+    }
+
+
 }
 
+
+@media screen and (max-width: 424px) {
+
+    #main{
+        width: 120vw;
+        position: relative;
+        border: red solid 1px;
+        
+    }
+    .background-cover{
+        width: 100%;
+    }
+    .main-cover{
+        width: 0;
+    }
+
+}

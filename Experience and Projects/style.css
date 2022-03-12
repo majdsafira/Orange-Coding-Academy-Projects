@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+
+*{
+    font-family: 'Caveat', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+section{
+    display: flex;
+}
+
+.nav-bar{
+    border: black solid 1px;
+    width: 16%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.5s;
+    transition: all 0.5s;
+    background-color: white;
+    overflow: hidden;
+    
+}
+
+.nav-bar img{
+    width: 200px;
+    background-size: 100%;
+    margin-left: 10px;
+  
+}
+
+.nav-bar ul{
+    margin-left: 15px;
+    list-style-type: none;
+}
+
+.nav-bar li{
+    margin-top: 40px;
+    font-weight: bold;
+    padding-right: 30px ;
+  
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar i{
+    margin: 5px;
+}
+
+.social-links i{
+    
+    text-align: center;
+    margin: 30px;
+    margin-top: 95%;
+    font-size: large;
+}
+
+
+.experience{
+    width: 30%;
+ 
+}
+
+.experience div{
+    margin: 80px 50px 0px;
+   
+}
+
+.experience .text{
+    border-radius: 10px;
+    border: black solid 1px;
+    margin-top: 0;
+    margin-left: 0;
+    
+}
+
+.experience span{
+    font-size: medium;
+    background-color: rgba(128, 128, 128, 0.486);
+}
+
+.experience h1{
+    margin: 10px;
+}
+
+.project{
+background-color: rgb(17, 17, 31);
+width: 54%;
+}
+
+.project h1{
+    margin: 10px;
+    color: white;
+}
+
+.order{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+
+.Image-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+}
+
+
+.card{
+    
+    width: 40%;
+    margin: 7% 5% 9%;
+    border-radius: 20px;
+    
+
+}
+
+.card img{
+    width: 30%;
+}
+
+.card p{
+    padding: 5%;
+}

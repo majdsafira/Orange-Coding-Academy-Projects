@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+
+*{
+    font-family: 'Caveat', cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+section{
+    display: flex;
+}
+
+.card{
+    border: 1px black solid;
+    margin: 100px 30px 30px;
+    width: 30%;
+    height: 50vh;
+    border-radius: 10px;
+
+}
+
+.card img{
+    width: 200px;
+    margin: 5px;
+}
+
+.quotation{
+    text-align: center;
+    font-size: 40px;
+}
+
+.avatar-info{
+    display: flex;
+    font-size: 20px;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+
+footer{
+    position: absolute;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+}
+
+footer img{
+
+width: 50px;
+}

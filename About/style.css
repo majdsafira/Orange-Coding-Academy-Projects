@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 
 *{
     font-family: 'Caveat', cursive;
+    font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -139,9 +140,7 @@ font-size: 20px;
     font-size: 15px;
     }
 
-.item4{
 
-}
 
 .fake{
     width: 16%;
@@ -152,86 +151,23 @@ font-size: 20px;
 }
 
 
-
-
-
 #skills{
     display: flex;
 }
 
-#skills .background2{
+.skill{
     width: 84%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-
 }
 
-.skills{
-    background-color: rgb(17, 17, 26);
-    height: 45%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.Qualification{
-    background-color: rgb(33, 38, 43);
-    min-height: 50%;
-    width: 100%;
-}
-
-.skills ul{
-    width: 33%;
-}
-
-.skills li{
-    list-style-type: none;
-    color: white;
-    margin: 40px 10px;
-    padding: 3%;
-    
-}
-
-.background2 p{
-    height: auto;
+.skill h1{
     text-align: center;
+    background-color: rgb(56, 30, 151);
     color: white;
-    padding: 30px;
-    font-size: xx-large;
-    background-color: rgb(26, 26, 32); 
     margin: 0;
+    border: 1px black solid;
 }
 
-
-.Qualification{
-    display: flex;
-    justify-content: space-around;
-
-}
-
-.Qualification div{
-    background-color: white;
-    border-radius: 20px;
-    margin: 30px;
-    width: 25%;
-}
-
-.Qualification .text{
-    margin: 0 20px;
-    width: auto;
-    height: 30%;
-    font-size: larger;
-
-}
-.Qualification img{
-    margin: 10px auto;
-    width: 100%;
-    height: 60%;
-}
-
-
-.skills {
+.skill .list{
     display: flex;
 }
 
@@ -240,6 +176,116 @@ font-size: 20px;
     width: 0;
     height: 0;
 }
+
+.soft-skill{
+    width: 50%;
+    background-color: white;
+    
+}
+
+.soft-skill div{
+    text-align: center;
+    margin: 20px;
+    border: 1px black solid;
+}
+
+.soft-skill h2{
+    text-align: center;
+    margin: 10px;
+}
+
+.tech-skill{
+    width: 50%;
+    background-color: white;
+}
+
+.tech-skill div{
+    text-align: center;
+    margin: 20px;
+    border: 1px black solid;
+}
+
+.tech-skill h2{
+    text-align: center;
+    margin: 10px;
+}
+
+
+.language{
+    width: 84%;
+    background-color: rgb(56, 30, 151);
+}
+
+
+.fix{
+    display: flex;
+}
+
+
+.sizeing{
+    width: 100%;
+    height: 50%;
+    margin: 10% auto;
+    padding: 10%;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+.language h2{
+    border: 1px white solid;
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+    background-color: rgb(56, 30, 151);
+    color: white;
+
+}
+
+#education{
+    display: flex;
+}
+
+
+.cards{
+    
+    width: 84%;
+}
+.cards h2{
+    
+    text-align: center;
+    color: rgb(56, 30, 151);
+    grid-area: head;
+    border: rgb(56, 30, 151) 2px solid;
+    
+}
+
+
+
+.cards{
+    
+    padding: 100px 200px;
+    display: grid;
+    grid-template-areas:
+    'head head head head head head'
+    'brief brief brief brief brief brief'
+    'tech tech tech soft soft soft';
+}
+
+.brief{grid-area: brief;
+margin: 10px;
+border: rgb(56, 30, 151) 2px solid;
+}
+.soft-courses{grid-area: soft;
+    margin: 10px;
+    border: rgb(56, 30, 151) 2px solid;
+}
+.tech-courses{grid-area: tech;
+    margin: 10px;
+    border: rgb(56, 30, 151) 2px solid;
+}
+
+
 
 
 @media screen and (max-width: 1000px) {

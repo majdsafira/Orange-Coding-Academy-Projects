@@ -74,7 +74,13 @@ section{
 
 .experience div{
     margin: 80px 50px 0px;
-   
+    box-shadow:0 5px 25px rgba(1 1 1 / 15%);
+    border-radius:10px;
+    transition: 0.7s ease;
+}
+
+.experience div:hover{
+    transform: scale(1.1);
 }
 
 .experience .text{
@@ -95,6 +101,13 @@ section{
 }
 
 
+.cards h2:hover{
+    
+    transform: scale(1.1);
+
+}
+
+
 .project{
     background-color: rgb(17, 17, 31);
     width: 54%;
@@ -108,6 +121,9 @@ section{
 .order{
     display: flex;
     flex-wrap: wrap;
+    box-shadow:0 5px 25px rgba(1 1 1 / 15%);
+    border-radius:10px;
+    transition: 0.7s ease;
     
 }
 
@@ -122,10 +138,15 @@ section{
     width: 40%;
     margin: 7% 5% 9%;
     border-radius: 20px;
+
     
 
 }
 
+
+.order :hover{
+    transform: scale(1.1);
+}
 .card img{
     width: 30%;
 }

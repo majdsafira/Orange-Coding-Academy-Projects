@@ -306,8 +306,20 @@ font-size: 20px;
     color: rgb(46, 42, 61);
     grid-area: head;
     border: rgb(27, 24, 39) 2px solid;
+    box-shadow:0 5px 25px rgba(1 1 1 / 15%);
+border-radius:10px;
+transition: 0.7s ease;
+    
     
 }
+
+.cards h2:hover{
+    
+    transform: scale(1.1);
+
+}
+
+
 
 
 
@@ -319,6 +331,10 @@ font-size: 20px;
     'head head head head head head'
     'brief brief brief brief brief brief'
     'tech tech tech soft soft soft';
+
+    box-shadow:0 5px 25px rgba(1 1 1 / 15%);
+    border-radius:10px;
+    transition: 0.7s ease;
 }
 
 .brief{grid-area: brief;

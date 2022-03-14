@@ -105,7 +105,6 @@ body{
 
 .item1 { grid-area: header; }
 .item2 { grid-area: main;   }
-.item3 { grid-area: education;  }
 .item4 { grid-area: contact;  }
 .item5 { grid-area: picture;  }
 
@@ -119,7 +118,6 @@ body{
     grid-template-areas:
     'header header header picture picture picture'
     'main main main picture picture picture'
-    'education education education education education education'
     'contact contact contact contact contact contact';
 
 }
@@ -169,7 +167,7 @@ font-size: 20px;
 
 .skill h1{
     text-align: center;
-    background-color: rgb(56, 30, 151);
+    background-color: rgb(16, 15, 22);
     color: white;
     margin: 0;
     border: 1px black solid;
@@ -180,7 +178,7 @@ font-size: 20px;
 }
 
 .header{
-    left: -300px;
+    top: -300px;
     width: 0;
     height: 0;
 }
@@ -188,6 +186,9 @@ font-size: 20px;
 .soft-skill{
     width: 50%;
     background-color: white;
+    box-shadow:0 5px 25px rgba(1 1 1 / 15%);
+    border-radius:10px ;
+    transition: 0.7s ease;
     
 }
 
@@ -195,6 +196,22 @@ font-size: 20px;
     text-align: center;
     margin: 20px;
     border: 1px black solid;
+    border-radius: 10px;
+    box-shadow:0 5px 25px rgba(1 1 1 / 15%);
+    border-radius:10px;
+    transition: 0.7s ease;
+}
+
+.soft-skill div:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+}
+
+.soft-skill:hover{
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
 }
 
 .soft-skill h2{
@@ -211,6 +228,28 @@ font-size: 20px;
     text-align: center;
     margin: 20px;
     border: 1px black solid;
+    border-radius:10px;
+    transition: 0.7s ease;
+    box-shadow:0 5px 25px rgba(1 1 1 / 15%);
+    border-radius:10px ;
+}
+
+.tech-skill{
+    transition: 0.7s ease;
+    box-shadow:0 5px 25px rgba(1 1 1 / 15%);
+    border-radius:10px ;
+}
+
+.tech-skill div:hover{
+    transform: scale(1.1);
+    background-color: white;
+    color: black;
+}
+
+.tech-skill:hover{
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
 }
 
 .tech-skill h2{
@@ -221,7 +260,7 @@ font-size: 20px;
 
 .language{
     width: 84%;
-    background-color: rgb(56, 30, 151);
+    background-color: rgb(31, 30, 37);
 }
 
 
@@ -240,12 +279,14 @@ font-size: 20px;
     
 }
 
+
+
 .language h2{
     border: 1px white solid;
     margin: auto;
     margin-top: 5%;
     text-align: center;
-    background-color: rgb(56, 30, 151);
+    background-color: rgb(31, 30, 37);
     color: white;
 
 }
@@ -262,9 +303,9 @@ font-size: 20px;
 .cards h2{
     
     text-align: center;
-    color: rgb(56, 30, 151);
+    color: rgb(46, 42, 61);
     grid-area: head;
-    border: rgb(56, 30, 151) 2px solid;
+    border: rgb(27, 24, 39) 2px solid;
     
 }
 
@@ -272,7 +313,7 @@ font-size: 20px;
 
 .cards{
     
-    padding: 100px 200px;
+    padding: 10% 20%;
     display: grid;
     grid-template-areas:
     'head head head head head head'
@@ -282,15 +323,15 @@ font-size: 20px;
 
 .brief{grid-area: brief;
 margin: 10px;
-border: rgb(56, 30, 151) 2px solid;
+border: rgb(9, 8, 12) 2px solid;
 }
 .soft-courses{grid-area: soft;
     margin: 10px;
-    border: rgb(56, 30, 151) 2px solid;
+    border: rgb(26, 24, 34) 2px solid;
 }
 .tech-courses{grid-area: tech;
     margin: 10px;
-    border: rgb(56, 30, 151) 2px solid;
+    border: rgb(25, 22, 34) 2px solid;
 }
 
 .brief span{
@@ -308,7 +349,7 @@ border: rgb(56, 30, 151) 2px solid;
 
 #footer .nav{
     width: 100%;
-    display: block;
+    display: inline-block;
     height: 30vh;
     background-image: linear-gradient(rgba(75, 61, 71, 0.7),rgba(17, 42, 139, 0.7)), url(../images/background3.jpg);
    
@@ -322,18 +363,21 @@ border: rgb(56, 30, 151) 2px solid;
 
 .nav h1{
     text-align: center;
+    margin-top: 50px;
 }
 
 .nav ul{
-    margin: auto;
     width: 50%;
     margin-top: 3%;
+    margin: auto;
+    margin-left: 30%  ;
     
 }
 .nav li{
     display: inline;
-    margin: 0 15px;
-    color: black;
+    text-align: center;
+    margin: 10px;
+    color: white;
     font-family: 'Source Code Pro', monospace;
     
     
@@ -358,12 +402,13 @@ border: rgb(56, 30, 151) 2px solid;
         left: -300px;
     }
 
+    
     .header{
         position: fixed;
         background-color: aliceblue;
-        width: 100vw;
+        width: 100%;
         height: 10%;
-        left: 0;
+        top: 0;
         transition: all ease-in-out 0.5s;
         transition: all 0.5s;
         z-index: 9997;
@@ -377,10 +422,9 @@ border: rgb(56, 30, 151) 2px solid;
     }
 
     .header li{
-        margin: 10px;
         text-decoration: none;
         color: black;
-        margin: 20px;
+        margin: auto;
     }
 
     .fake{
@@ -388,26 +432,52 @@ border: rgb(56, 30, 151) 2px solid;
     }
 
     .main-cover{
-        width: 60%;
+        width: 0%;
+    }
+
+    .background-cover div{
+       margin: 300px 100px;
     }
 
     .background-cover{
-        width: 40%;
-        
+        width: 100%;
+
     }
+
+  .grid-container{
+      width: 100%;
+  }
+
+  .skill{
+      width: 100%;
+  }
+
+  .language{
+      width: 100%;
+  }
+
+  .cards{
+      width: 100%;
+  }
+
+  .nav-container{
+      width: 100%;
+  }
+
+  
+
+  .nav-container li{
+    display: none;
+  }
+
 
 
 }
 
 
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 425px) {
 
-    #main{
-        width: 120vw;
-        position: relative;
-        border: red solid 1px;
-        
-    }
+
     .background-cover{
         width: 100%;
     }
@@ -415,4 +485,50 @@ border: rgb(56, 30, 151) 2px solid;
         width: 0;
     }
 
+    #about{
+        width: 100%;
+    }
+
+    .skill{
+        width: 100%;
+    }
+
+    .header li{
+        box-sizing: content-box;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+.header{
+   
+    
+}
+
+.header li{
+    margin: 0;
+    
+}
+
+.header ul{
+    margin: 0;
+   
+}
+
+.background-cover{
+    width: 120vw;
+}
+
+.grid-container{
+    width: 200vw;
+}
+
+.skill{
+    width: 120vw;
+}
+
+
+.fake{
+    width: 0%;
+}
 }

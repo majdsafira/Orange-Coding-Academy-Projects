@@ -428,19 +428,25 @@ border: rgb(9, 8, 12) 2px solid;
         transition: all ease-in-out 0.5s;
         transition: all 0.5s;
         z-index: 9997;
+        
+
 
     }
 
     .header ul{
+        height: 100%;
+        align-items: center;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         list-style-type: none;
+        
     }
 
     .header li{
         text-decoration: none;
         color: black;
         margin: auto;
+        height: 10%;
     }
 
     .fake{
@@ -548,3 +554,48 @@ border: rgb(9, 8, 12) 2px solid;
     width: 0%;
 }
 }
+
+
+@media screen and (max-width: 320px) {
+    .header{
+       
+        width: 100%;
+    }
+    
+    .header li{
+        margin: 0;
+        
+    }
+    
+    .header ul{
+        margin: 0;
+       
+    }
+    
+    .background-cover{
+        width: 120vw;
+    }
+    
+    .grid-container{
+        width: 120vw;
+    }
+    
+    #skills{
+        width: 120vw;
+    }
+    
+    #language{
+        width: 120vw;
+    }
+
+    #education{
+        width: 120vw;
+    }
+
+    #footer{
+        width: 120vw;
+    }
+    .fake{
+        width: 0%;
+    }
+    }

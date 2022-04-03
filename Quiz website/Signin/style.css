@@ -262,6 +262,17 @@ input{
 }
 
 
+@keyframes mynewmove {
+    0%,
+    100% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+
 @media (max-width: 768px) {
 
     body{

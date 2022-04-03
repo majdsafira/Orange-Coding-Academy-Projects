@@ -16,7 +16,6 @@
 }
 
 body{
-    background: var(--main-color3);
     font-family: 'Work Sans', sans-serif;
     display: flex;
     justify-content: center;
@@ -27,9 +26,18 @@ body{
 
 }
 
+body.active .circle1{
+    background: var(--main-color4);
+}
+
+body.active .circle2{
+    background: var(--main-color4);
+}
+
 h1{
-    font-weight: bold;
     margin: 0;
+    font-weight: bold;
+    
 }
 
 p{
@@ -44,10 +52,9 @@ span{
 }
 
 a{
+    margin: 15px 0;
     text-decoration: none;
     color: var(--main-color1);
-    margin: 15px 0;
-    
 }
 
 .social-container{
@@ -55,25 +62,27 @@ a{
 }
 
 form{
-    background-color: white;
+
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 50px;
-    height: 100%;
+    background-color: white;
 }
 
 .container{
+    width: 800px;
     background-color: white;
+    overflow: hidden;
     border-radius: 10px;
     position: relative;
-    overflow: hidden;
     max-width: 100%;
-    width: 800px;
     min-height: 500px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.353) , 0 10px 30px rgba(0, 0, 0, 0.195);
+    
 }
 
 .form-container{
@@ -81,6 +90,7 @@ form{
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
+ 
 }
 
 
@@ -96,6 +106,17 @@ letter-spacing: 1px;
 text-transform: uppercase;
 transition: transform 100ms ease-in;
 }
+
+body .sign-up-container .sign-up-btn{
+    background-color: var(--main-color4);
+    border: 1px solid;
+}
+
+.overlay-left .btn{
+    border: 1px solid var(--main-color3);
+}
+
+
 
 button:active{
     transform: scale(0.90);
@@ -148,7 +169,7 @@ input{
 
 .overlay {
 	background: var(--main-color1);
-	background: linear-gradient(to right, #0D83AE, #122c36);
+	background: linear-gradient(to left , #0d83AE, #bedede,#e6ceb2 ,  #EC8757);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -197,8 +218,12 @@ input{
 	transform: translateX(20%);
 }
 
-.social-container {
-	margin: 20px 0;
+.sign-up-container .social-container a{
+    color: var(--main-color4);
+}
+
+.sign-up-container h1{
+    color: var(--main-color4);
 }
 
 .container.active .sign-in-container{
@@ -234,8 +259,8 @@ input{
     width: 100%;
     height: 100%;
     clip-path: circle(600px at left 100px);
-    animation: animation 1s linear infinite;
     transition: .5s;
+    z-index: -1;
 }
 
 .circle2 {
@@ -246,6 +271,6 @@ input{
     width: 100%;
     height: 100%;
     clip-path: circle(650px at right 600px);
-    animation: animation 1s linear infinite;
     transition: .5s;
+    z-index: -1;
 }

@@ -62,7 +62,6 @@ a{
 }
 
 form{
-
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -146,7 +145,7 @@ input{
 .sign-up-container{
     left: 0;
     width: 50%;
-    z-index: 1;
+    z-index: -1;
 }
 .overlay-container {
 	position: absolute;
@@ -237,19 +236,6 @@ input{
 }
 
 
-.containe.active .overlay-container{
-    transform: translateX(50%);
-}
-
-
-.containe.active .overlay-left{
-    transform: translateX(0);
-}
-
-
-.containe.active .overlay-right{
-    transform: translateX(20%);
-}
 
 .circle1 {
     background: var(--main-color1);
@@ -273,4 +259,96 @@ input{
     clip-path: circle(650px at right 600px);
     transition: .5s;
     z-index: -1;
+}
+
+
+@media (max-width: 768px) {
+
+    body{
+        all: initial;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    .container{
+        width: 100%;
+        border-radius: 0;
+        height: 100vh;
+
+    }
+
+    .form-container{
+        width: 100%;
+        top: 20%;
+        height: 50%;
+    }
+
+    .sign-in-container{
+        top: 50%;
+    }
+
+    .sign-up-container {
+        z-index: -1;
+    }
+
+    .overlay{
+        background: linear-gradient(to bottom  , #0d83AE, #bedede,#e6ceb2 ,  #EC8757);
+        width: 100%;
+        height: 200%;
+        left: 0%;
+    }
+
+    .overlay-container {
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 50%;
+    }
+
+    .overlay-panel{
+        top: 0%;
+        height: 50%;
+        width: 100%;
+    }
+
+    .overlay-left{
+        transform: translateY(100%);
+    }
+
+    .overlay-right{
+        transform: translateY(0%);
+    }
+
+
+    .sign-in-container.active-media {
+        top: 0%;
+        
+    }
+
+
+
+    .overlay-container.active-media{
+        transform: translateY(100%);
+    }
+
+
+    .overlay.active-media{
+        transform: translateY(-50%);
+    }
+
+    .form-container.active-media{
+        top: 0;
+    }
+
+    .sign-up-container.active-media{
+        z-index: 5;
+        
+    }
+
+}
+
+
+@media (max-width: 343px) {
+    form{
+        padding: 0px;
+    }
 }

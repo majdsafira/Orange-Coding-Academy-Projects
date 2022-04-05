@@ -1,5 +1,65 @@
 
 var i = 0;
+let counter = 16;
+
+
+qustions = [
+    {
+        "question" : "Which number should come next in the pattern? 37, 34, 31, 28" ,
+        "choices" : [
+            "25",
+            "23",
+            "15",
+            "27"
+        ] ,
+        "correct" : "25",
+        "choice" : "",
+    },{
+        "question" : "Find the answer that best completes the analogy: Book is to Reading as Fork is to:" ,
+        "choices" : [
+            "drawing",
+            "writing",
+            "stirring",
+            "eating"
+        ] ,
+        "correct" : "eating",
+        "choice" : "",
+    },{
+        "question" : "What number best completes the analogy: 8:4 as 10:" ,
+        "choices" : [
+            "3",
+            "7",
+            "24",
+            "5"
+        ] ,
+        "correct" : "5",
+        "choice" : "",
+    } , 
+    {
+        "question" : "Sequential reasoning is often tested in IQ exams. 3, 7, 13, 21, 31. What number comes next in the sequence?" ,
+        "choices" : [
+            "37",
+            "45",
+            "39",
+            "43"
+        ] ,
+        "correct" : "43",
+        "choice" : "",
+    },{
+        "question" : "A, B, D, G, K. Which letter comes next in the sequence?" ,
+        "choices" : [
+            "P",
+            "N",
+            "M",
+            "O"
+        ] ,
+        "correct" : "P",
+        "choice" : "",
+    }
+]
+
+
+
 
 start_btn = document.getElementById("start-btn");
 rules_container = document.getElementById("rules-container");
@@ -44,15 +104,16 @@ document.querySelector("body").addEventListener("click" , function(event){
             num = Number(id[12]) - 1;
             qustions[num].choice = document.getElementById(temp).innerHTML;
             myJSON = JSON.stringify(qustions[num]);
-            localStorage.setItem("qustion" + (num +1), myJSON);
+            localStorage.setItem("questions" + (counter), myJSON);
             selected = false;
+            counter++;
             
             
         }else if(id.indexOf("submit") >= 0){
             num = 4;
             qustions[num].choice = document.getElementById(temp).innerHTML;
             myJSON = JSON.stringify(qustions[num]);
-            localStorage.setItem("qustion5", myJSON);
+            localStorage.setItem("questions20", myJSON);
         }
 
 
@@ -161,87 +222,8 @@ submit.addEventListener("click" , function(){
     
 });
 
+document.getElementById("main-btn").addEventListener("click" , function(){
+    localStorage.setItem("sections2",true)
+})
 
-
-
-
-qustions = [
-    {
-        "qustion" : "Which number should come next in the pattern? 37, 34, 31, 28" ,
-        "choices" : [
-            "25",
-            "23",
-            "15",
-            "27"
-        ] ,
-        "answeres" : [
-            "true",
-            "fasle",
-            "fasle",
-            "fasle"
-        ],
-        "choice" : "",
-    },{
-        "qustion" : "Find the answer that best completes the analogy: Book is to Reading as Fork is to:" ,
-        "choices" : [
-            "drawing",
-            "writing",
-            "stirring",
-            "eating"
-        ] ,
-        "answeres" : [
-            "fasle",
-            "fasle",
-            "fasle",
-            "true"
-        ],
-        "choice" : "",
-    },{
-        "qustion" : "What number best completes the analogy: 8:4 as 10:" ,
-        "choices" : [
-            "3",
-            "7",
-            "24",
-            "5"
-        ] ,
-        "answeres" : [
-            "fasle",
-            "fasle",
-            "fasle",
-            "true"
-        ],
-        "choice" : "",
-    } , 
-    {
-        "qustion" : "Sequential reasoning is often tested in IQ exams. 3, 7, 13, 21, 31. What number comes next in the sequence?" ,
-        "choices" : [
-            "37",
-            "45",
-            "39",
-            "43"
-        ] ,
-        "answeres" : [
-            "fasle",
-            "fasle",
-            "fasle",
-            "true"
-        ],
-        "choice" : "",
-    },{
-        "qustion" : "A, B, D, G, K. Which letter comes next in the sequence?" ,
-        "choices" : [
-            "P",
-            "N",
-            "M",
-            "O"
-        ] ,
-        "answeres" : [
-            "true",
-            "fasle",
-            "fasle",
-            "fasle"
-        ],
-        "choice" : "",
-    }
-]
 
